@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Field Editor - Fillable Form Generator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="editor-layout">
+    <aside class="toolbar">
+        <h2>Add Field</h2>
+        <button class="tool-btn" data-type="TEXT">+ Text Field</button>
+        <button class="tool-btn" data-type="DATE">+ Date Field</button>
+        <button class="tool-btn" data-type="CHECKBOX">+ Checkbox</button>
+        <button class="tool-btn" data-type="SIGNATURE">+ Signature</button>
+        <p class="empty-hint" id="placingHint" style="display:none;">Click and drag on the document to place the field.</p>
+        <p class="empty-hint" id="docName"></p>
+
+        <h2>Autofill from Text</h2>
+        <textarea id="autofillText" class="autofill-textarea" rows="6"
+            placeholder="Paste details here, e.g.&#10;Name: John Doe&#10;Email: john@example.com&#10;Phone: 555-123-4567"></textarea>
+        <button class="tool-btn" id="autofillBtn">Autofill Fields</button>
+        <p class="status" id="autofillStatus"></p>
+
+        <button class="primary-btn" id="generateBtn">Generate Fillable Form</button>
+        <p class="status" id="generateStatus"></p>
+        <button class="primary-btn" id="downloadPdfBtn" style="display:none;">Download PDF</button>
+        <button class="primary-btn" id="downloadDocxBtn" style="display:none;">Download DOCX</button>
+    </aside>
+
+    <section class="pdf-viewport" id="pdfViewport">
+        <p class="empty-hint">Loading document...</p>
+    </section>
+
+    <aside class="side-panel">
+        <h2>Field Properties</h2>
+        <div id="fieldForm" class="field-form">
+            <p class="empty-hint">Select a field to edit it, or add a new one from the left toolbar.</p>
+        </div>
+    </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>

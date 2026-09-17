@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fillable Form Generator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="upload-page">
+    <h1>Fillable Form Generator</h1>
+    <p class="subtitle">Upload a .docx or .pdf and turn it into a fillable PDF form.</p>
+
+    <div id="dropzone" class="dropzone">
+        <p>Drag &amp; drop a .docx or .pdf here, or click to choose a file</p>
+        <input type="file" id="fileInput" accept=".pdf,.docx" hidden>
+    </div>
+
+    <div id="status" class="status"></div>
+</main>
+<script src="js/upload.js"></script>
+</body>
+</html>
